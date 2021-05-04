@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    //COMPUTER GENERATES A CHOICE
+    function computerPlay(){
+    	let options = ["Rock" , "Paper", "Scissors"];
+    	
+    	let choice = Math.floor((Math.random() * 3));
+    	return options[choice];
+    }
+    //USER IS ASKED FOR A CHOICE
+    function userPlay(){
+      let userChoice = prompt ("Rock, Paper or Scisors?");
+      let fUserChoice= userChoice.slice(0,1).toUpperCase() + userChoice.slice(1).toLowerCase();
+
+
+      return fUserChoice;
+    }
+    //CHOICES ARE COMPARED TO FIND A WINNER
+    function playRound(playerSelection, computerSelection){
+
+
+      console.log("You selected " + playerSelection);
+      console.log("The Computer Selected " + computerSelection);
+
+      let whoWon;
+
+      switch(playerSelection){
+
+        case "Rock":
+            if (computerSelection =="Scissors"){
+                console.log("You Win");
+                whoWon = "P";
+                return whoWon;
+            }
+            else if (computerSelection == "Rock"){
+                console.log("It's a draw");
+                whoWon="D";
+                return whoWon;
+            }
+            else if (computerSelection == "Paper"){
+              console.log("Computer Wins");
+                whoWon="C";
+                return whoWon;
+            }
+        case "Paper":
+            if (computerSelection =="Scissors"){
+                console.log("Computer Wins");
+                whoWon="C";
+                return whoWon;
+            }
+            else if (computerSelection == "Rock"){
+                console.log("You Win")
+                whoWon = "P";
+                return whoWon;
+            }
+            else if (computerSelection == "Paper"){
+                console.log("It's a draw");
+                whoWon="D";
+                return whoWon;
+            }
+        case "Scissors":
+            if (computerSelection =="Scissors"){
+                console.log("It's a draw");
+                whoWon="D";
+                return whoWon;
+            }
+            else if (computerSelection == "Rock"){
+                console.log("Computer Wins");
+                whoWon="C";
+                return whoWon;
+            }
+            else if (computerSelection == "Paper"){
+              console.log("You Win");
+              whoWon = "P";
+              return whoWon;
+            }
+          default:
+            console.log("Please enter a valid choice");
+            whoWon= "E";
+            return whoWon;
+
+      }
+    }
+    //GAME AND SCORECOUNT
+    function game(rounds){
+      let player, computer,counter;
+
+      for (i=0; i<rounds; i++){
+        player= userPlay();
+        computer = computerPlay();
+
+        console.log(playRound(player, computer));
+
+      }
+    }
+
+    /* MAIN GAMEPLAY */
+    /*PLAY 5 TIMES*/
+    game(5);
+
+
+
+  </script>
+</body>
+</html>
