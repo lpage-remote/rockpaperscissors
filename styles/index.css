@@ -1,0 +1,64 @@
+/*CSS Styling for Rock Paper Scissors */
+.gameheader, p{
+	display: block;
+	text-align: center;
+}
+
+.playerchoice{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+button{
+	background-color: #92B275;
+	height: 280px;
+	width: 160px;
+	border: 0px solid;
+	border-radius: 10px;
+
+	margin: 10px;
+}
+
+button:active{
+	border: 2px solid #798E5E;
+}
+
+button.computer{
+	background-color: #2C2A25;
+	color: white;
+}
+
+
+
+.cardButtons{
+	display: flex;
+	align-content: space-around;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items:center;
+
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+
+/*FOOTER*/
+.info {
+	position: fixed;
+	bottom:0px;
+	height: 50px;
+	width: 100%;
+
+	text-align: center;
+}
+
+p.info {
+	display: block;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}

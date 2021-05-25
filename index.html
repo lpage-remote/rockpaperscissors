@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rock Paper Scissors</title>
+
+    <link href="./styles/index.css" type="text/css" rel="stylesheet">
+    <script src="./scripts/rps.js" async></script>
+  
+  </head>
+
+  <body>
+    <header class="gameheader">
+      <p>Rock Paper Scissors</p>
+      <p id="roundCounter">Click to start!</p>
+    </header>
+
+    <main class="content">
+      <div class="cardButtons">
+      <!-- event listeners to buttons that calls playRound with the correct playerSelection -->
+        <div class="playerChoice">
+          <p>You choose...</p>
+          <button id="rock">Rock</button>
+          <button id="paper">Paper</button>
+          <button id="scissors">Scissors</button>
+        </div>
+
+        <div class="computerChoice">
+          <p>The computer chooses...</p>
+          <button class="computer" id="computer" disabled>?</button>
+        </div>
+      </div>
+
+    <!--display results and announce a winner at 5 points-->
+    <div class="score-count">
+      <p> The score is... </p>
+      <p id="score">0 - 0</p>
+      <p id="gameOver"> </p>
+      </div>
+    </main>
+
+    <footer class="info">
+      <p> Built by <a href="https://github.com/lpage-remote"> Lauren Page </a></p>
+    </footer>
+
+  </body>
+
+</html>
